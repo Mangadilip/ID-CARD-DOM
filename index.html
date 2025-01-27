@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            border: 2px solid ;
+            width: 250px;
+            height: 380px;
+            border-radius: 20px;
+            /* border-top-right-radius: 20px; */
+            
+        }
+        .image{
+            width:100%;
+            background-color:wheat;
+            height: 50px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        .image2{
+            width: 50%;
+            height: 40%;
+            margin-top: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .image3{
+            width: 50%;
+            height: 40px;
+            /* border: 1px solid; */
+            margin-left: 123px;
+            margin-top: -20px;
+            border-radius: 30px;
+            
+           
+        }
+        .content{
+            line-height: 1.4;
+            margin-left: 60px;
+            /* position:relative; */
+            
+            
+        }
+        .footer{
+            margin-top: -20px;
+            margin-left: 160px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <h1>ID CARD</h1>
+    <button onclick="opencard()">view</button>
+    <script>
+        let div1=document.createElement("div")
+        let image=document.createElement("img")
+        let image2=document.createElement("img")
+        let content=document.createElement("p")
+        let image3=document.createElement("img")
+        let footer=document.createElement("p")
+        function opencard(){
+        
+        div1.classList.add("div1")
+        document.body.append(div1)
+
+        
+        image.setAttribute("src","https://www.vecw.edu.in/wp-content/uploads/2024/11/cropped-untitled-design-19-3.png")
+        image.classList.add("image")
+        div1.appendChild(image)
+
+        
+        image2.setAttribute("src","https://images.genius.com/adc307ce702341dd1b9b0a296e3ceaf8.702x702x1.jpg")
+        image2.classList.add("image2")
+        div1.appendChild(image2)
+
+        
+        content.innerHTML=" <strong>Name:</strong> M.Dilip <br><strong>Roll no:</strong> 20641A0563 <br><strong>Course:</strong> B-Tech-CSE <br><strong>Valid Upto:</strong> 2024"
+        content.classList.add("content")
+        div1.appendChild(content)
+
+        
+        image3.setAttribute("src","https://pbs.twimg.com/media/E4FGQtDXoAEdQi-?format=png&name=large")
+        image3.classList.add("image3")
+        div1.appendChild(image3)
+
+        
+        footer.innerHTML="Principal"
+        footer.classList.add("footer")
+        div1.appendChild(footer)
+        }
+        
+
+        // document.body.style.backgroundColor="red"
+    </script>
+</body>
+</html>
